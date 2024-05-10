@@ -35,6 +35,7 @@ const theme = createTheme({
     },
   },
 });
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 export default function Home() {
   return (
     <>
@@ -101,13 +102,37 @@ export default function Home() {
               </Box>
         </Stack>
       </Box>
-      {/* <ThemeProvider theme={theme}>
-     <Container maxWidth="xl">
-        <Box component="section" sx={{ p: 2, border: '1px dashed grey' }}>
-          This Box renders as an HTML section element.
-        </Box>
-      </Container>
-    </ThemeProvider> */}
+      
+
+
+      <ThemeProvider theme={theme}>
+        <Container maxWidth="xl">
+            <Box component="section" sx={{ display : 'flex', justifyContent: "center", width : '100%' }}>
+               <Box sx={{ p: 2, width : '78%'}}>
+                   <Stack direction={"column"} component={"div"} spacing={3} alignItems="center"  justifyContent="center">
+                       <Box> 
+                           <Typography variant="h2" sx={{textAlign: "center", fontWeight: "1000", fontSize : 77}}>
+                                Create hight-converting funnels in just 60 minutes
+                           </Typography>
+                       </Box>
+                       <Box> 
+                       <Typography variant="inherit" sx={{textAlign: "center",fontSize : 23, lineHeight : 1.2, color : "#544F54"}}>
+                                Generate a steady flow of customers or talents with lightning-fast and easy-to-build Perspective Funnels. No design or programing skills required
+                           </Typography>
+                       </Box>
+                       <Box> 
+                          <Stack direction="row" spacing={2}>
+                               <Button variant="contained" sx={{ py:2, px : 3, background : "#437AFF" , borderRadius : '6px', fontSize : '15px'}}>TStart my free 14-day trial</Button>
+                              <Button   startIcon={<ArrowForwardIosIcon />} sx={{px : 3, color : "#437AFF", border : '1px solid #437AFF', borderRadius : '6px'}} variant="outlined">Login</Button>
+                              
+                          </Stack>
+                       </Box>
+                       <Box> 4</Box>
+                   </Stack>
+               </Box>
+            </Box>
+          </Container>
+    </ThemeProvider>
     </>
   );
 }
