@@ -1,95 +1,113 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
 
+import {
+  
+  createTheme,
+  ThemeProvider,
+  Container,
+  Box,
+  Stack,
+  Typography,
+  Avatar,
+  List,
+  ListItem,
+  Link,
+  Button,
+  colors,
+} from "@mui/material";
+const theme = createTheme({
+  components: {
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          "&.MuiContainer-maxWidthSm": {
+            maxWidth: "400px",
+          },
+          "&.MuiContainer-maxWidthMd": {
+            maxWidth: "800px",
+          },
+          "&.MuiContainer-maxWidthXl": {
+            maxWidth: "1200px",
+          },
+          // Add other classes as needed
+        },
+      },
+    },
+  },
+});
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <Box component="section" sx={{ padding : 2 }}>
+        <Stack
+          
+          direction="row"
+          justifyContent="space-between"
+          alignItems="center"
+          spacing={0}
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+          
+              <Box component={"div"} >
+                  <Stack 
+                     direction="row"
+                     justifyContent="center"
+                     alignItems={"center"}
+                     spacing={1}
+                  >
+                     <Avatar variant="rounded" sx={{ width: 32, height: 32 }} alt="Remy Sharp" src="https://assets-global.website-files.com/61ba09162b87002e87715b91/61bb125944d9e0417af764a9_perspective-icon-logo.webp" />
+                   
+                      <Typography variant={"h6"}>
+                          Perspective
+                      </Typography>
+                  </Stack>
+              </Box> 
+              <Box component={"div"}>
+                    <Stack direction="row" spacing={4}>
+                        <Link underline="none" href="#" color="black">Product</Link>
+                        <Link underline="none" href="#" color="black">Templates</Link>
+                        <Link underline="none" href="#" color="black">Pricing</Link>
+                        <Link underline="none" href="#" color="black">Resource</Link>
+                        <Link underline="none" href="#" color="black" >
+                            <Box component={"div"} sx={{position : 'relative'}}>
+                                About us
+                                <Box component={"div"} sx={{  
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+                                      display : "flex",
+                                      justifyContent : "center",
+                                      alignItems : 'center',
+                                      color : "white", 
+                                      position : 'absolute' , 
+                                      top : '-10px', 
+                                      right : '-25px' , 
+                                      width: '20px' , 
+                                      height: '20px', 
+                                      background : '#437AFF',
+                                      borderRadius : '20px',
+                                      fontSize : 12
+                                      }}>
+                                   3
+                                </Box>
+                            </Box>
+                        </Link>
+                    </Stack>
+              </Box>
+              
+              
+              <Box component={"div"}>
+                  <Stack direction="row" spacing={2}>
+                     <Button  sx={{color : "black", border : '1px solid #437AFF', borderRadius : '6px'}} variant="outlined">Login</Button>
+                     <Button variant="contained" sx={{ background : "#437AFF" , borderRadius : '6px'}}>Try for free</Button>
+                  </Stack>
+              </Box>
+        </Stack>
+      </Box>
+      {/* <ThemeProvider theme={theme}>
+     <Container maxWidth="xl">
+        <Box component="section" sx={{ p: 2, border: '1px dashed grey' }}>
+          This Box renders as an HTML section element.
+        </Box>
+      </Container>
+    </ThemeProvider> */}
+    </>
   );
 }
