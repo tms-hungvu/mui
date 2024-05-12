@@ -1,0 +1,15 @@
+@import './abstracts/index';
+
+
+.demo-css {
+    background: $base-color;
+}
+
+.b__content {
+    background: blue;
+
+
+    &--children-block {
+        background: orange;
+    }
+}
