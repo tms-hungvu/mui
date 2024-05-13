@@ -69,6 +69,7 @@ import { useRef, useState } from "react";
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
+import Layout from "./components";
 
 export default function Home() {
   const prevRef = useRef(null);
@@ -103,94 +104,7 @@ export default function Home() {
   ];
   return (
     <>
-      <Box component="section" sx={{ padding: 2 }}>
-        <Stack
-          direction="row"
-          justifyContent="space-between"
-          alignItems="center"
-          spacing={0}
-        >
-          <Box component={"div"}>
-            <Stack
-              direction="row"
-              justifyContent="center"
-              alignItems={"center"}
-              spacing={1}
-            >
-              <Avatar
-                variant="rounded"
-                sx={{ width: 32, height: 32 }}
-                alt="Remy Sharp"
-                src="https://assets-global.website-files.com/61ba09162b87002e87715b91/61bb125944d9e0417af764a9_perspective-icon-logo.webp"
-              />
-
-              <Typography variant={"h6"}>Perspective</Typography>
-            </Stack>
-          </Box>
-          <Box component={"div"}>
-            <Stack direction="row" spacing={4}>
-              <Link underline="none" href="#" color="black">
-                Product
-              </Link>
-              <Link underline="none" href="#" color="black">
-                Templates
-              </Link>
-              <Link underline="none" href="#" color="black">
-                Pricing
-              </Link>
-              <Link underline="none" href="#" color="black">
-                Resource
-              </Link>
-              <Link underline="none" href="#" color="black">
-                <Box component={"div"} sx={{ position: "relative" }}>
-                  About us
-                  <Box
-                    component={"div"}
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      color: "white",
-                      position: "absolute",
-                      top: "-10px",
-                      right: "-25px",
-                      width: "20px",
-                      height: "20px",
-                      background: "#437AFF",
-                      borderRadius: "20px",
-                      fontSize: 12,
-                    }}
-                  >
-                    3
-                  </Box>
-                </Box>
-              </Link>
-            </Stack>
-          </Box>
-
-          <Box component={"div"}>
-            <Stack direction="row" spacing={2}>
-              <Button
-                sx={{
-                  color: "black",
-                  border: "1px solid #437AFF",
-                  borderRadius: "6px",
-                }}
-                variant="outlined"
-              >
-                Login
-              </Button>
-              <Button
-                variant="contained"
-                sx={{ background: "#437AFF", borderRadius: "6px" }}
-              >
-                Try for free
-              </Button>
-            </Stack>
-          </Box>
-        </Stack>
-      </Box>
-
+      <Layout>
       <ThemeProvider theme={theme}>
         <Container maxWidth="xl" sx={{ mt: "87px" }}>
           <Box
@@ -1408,105 +1322,12 @@ made simple.
             </Box>
         </Container>
 
-        <Container maxWidth="xl">
-            <Stack flexDirection={'row'} gap={'10px'}>
-                <Box  >
-                   <List>
-                      <ListItem sx={{color : '#141414', fontWeight : '600'}}> Use cases</ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Generate appointments </Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Source talent </Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Build an e-mail list</Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Make online sales</Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>For Agencies</Link></ListItem>
-                     
-                      
-                   </List>
-                </Box>
-                <Box >
-                <List>
-                      <ListItem sx={{color : '#141414', fontWeight : '600'}}> Product</ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Generate appointments </Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Source talent </Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Build an e-mail list</Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Make online sales</Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>For Agencies</Link></ListItem>
-                     
-                      
-                   </List>
-                </Box>
-                <Box  >
-                <List>
-                      <ListItem sx={{color : '#141414', fontWeight : '600'}}> Resources</ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Generate appointments </Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Source talent </Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Build an e-mail list</Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Make online sales</Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>For Agencies</Link></ListItem>
-                     
-                      
-                   </List>
-                </Box>
-                <Box  >
-                <List>
-                      <ListItem sx={{color : '#141414', fontWeight : '600'}}> Company</ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Generate appointments </Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Source talent </Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Build an e-mail list</Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Make online sales</Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>For Agencies</Link></ListItem>
-                     
-                      
-                   </List>
-                </Box>
-                <Box  >
-                <List>
-                      <ListItem sx={{color : '#141414', fontWeight : '600'}}> Legal</ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Generate appointments </Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Source talent </Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Build an e-mail list</Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Make online sales</Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>For Agencies</Link></ListItem>
-                     
-                      
-                   </List>
-                </Box>
-                <Box  >
-                <List>
-                      <ListItem sx={{color : '#141414', fontWeight : '600'}}> Follow us</ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Generate appointments </Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Source talent </Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Build an e-mail list</Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>Make online sales</Link></ListItem>
-                      <ListItem > <Link color={'#4F4F4F'} href="" underline={"none"}>For Agencies</Link></ListItem>
-                     
-                      
-                   </List>
-                </Box>
-                
-            </Stack>
-        </Container>
-
-        <Container maxWidth="xl" sx={{my : '60px'}} >
-            <Stack flexDirection={'row'} justifyContent={'space-between'} alignItems={'flex-end'}>
-               <Box>
-                   <List>
-                   
-                     <ListItem sx={{fontSize : '14px', fontWeight : 600}}>
-                     © Perspective Software GmbH
-                     </ListItem>
-                   </List>
-               </Box>
-
-               <Stack flexDirection={'row'} gap={'10px'}>
-                   <Avatar variant="square"  sx={{width: '64px' , height : '100px'}} src="https://assets-global.website-files.com/61ba09162b87002e87715b91/62c85f30dfdd6b544f3cfbf7_gdpr.webp" alt="" />
-                   <Avatar variant="square"  sx={{width: '64px' , height : '100px'}} src="https://assets-global.website-files.com/61ba09162b87002e87715b91/6495d2ed50590116fbd4e99c_climate_active.webp" alt="" />
-                   <Avatar variant="square"  sx={{width: '64px' , height : '100px'}} src="https://assets-global.website-files.com/61ba09162b87002e87715b91/62257b4bcd0f0b08e9b93658_remote-company.webp" alt="" />
-
-               </Stack>
-            </Stack>
-        </Container>
+      
 
       </ThemeProvider>
+      </Layout>
+
+    
     </>
   );
 }
